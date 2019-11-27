@@ -1,24 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {Button, Grid, Typography} from '@material-ui/core';
+import MyCard from "./components/MyCard"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Grid container spacing={1}>
+        <Grid item xs>
+          <MyCard name="Kerem" hp="100" damage= "10" class="knight"></MyCard>
+        </Grid>
+        <Grid item xs>
+          <MyCard name="İrem" hp="150" damage= "12"></MyCard>
+        </Grid>
+      </Grid>
     </div>
   );
 }
