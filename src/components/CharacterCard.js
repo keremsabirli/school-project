@@ -3,7 +3,7 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, Grid } from '@material-ui/core';
 import knightimg from '../img/knight.png';
-import wizardimg from '../img/wizard.png';
+import witchimg from '../img/witch.png';
 const useStyles = makeStyles(theme => ({
     root: {
         border: "solid 2px",
@@ -13,27 +13,26 @@ const useStyles = makeStyles(theme => ({
     }
 }))
 
-export default function PaperSheet(props) {
+export default function MyCard(props) {
     const classes = useStyles();
     return (
         <Paper className={classes.root}>
             <Grid container spacing={1} alignItems="center">
                 <Grid container item xs>
-                    {props.class === "knight" ? (<img src={knightimg} alt="Knight"></img>) : (<img src={wizardimg} alt="Wizard"></img>)}
+                    {(props.heroClass === "knight") ? <img src={knightimg} alt="Knight"></img> : <img src={witchimg} alt="Witch"></img>}
                 </Grid>
                 <Grid container item xs>
                     <Grid item xs>
                         <Typography>
-                            Name : {props.name}
+                            Name : {props.heroName}
                         </Typography>
                         <Typography>
-                            HP : {props.hp}
+                            HP : {props.heroHp}
                         </Typography>
                         <Typography>
-                            Damage : {props.damage}
+                            Damage : {props.heroDmg}
                         </Typography>
                     </Grid>
-                    
                 </Grid>
             </Grid>
         </Paper>
