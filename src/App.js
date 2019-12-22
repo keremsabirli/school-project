@@ -1,31 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './App.css';
 import {Grid} from '@material-ui/core';
-import MyCard from './components/CharacterCard';
+import PersonCard from './components/PersonCard';
 import CharacterCreator from './components/CharacterCreator'
 import WeatherCard from './components/WeatherCard';
+import Widgets from './components/Widgets';
 
-function App() {
-  return (
-    <div className="App">
-    <CharacterCreator></CharacterCreator>
-      <Grid container spacing={1}>
-        <Grid item xs>
-        </Grid>
-      </Grid>
-      <Grid container spacing={1}>
-        <Grid item xs>
-          <MyCard heroName="Kerem" heroHp="100" heroDmg= "10" heroClass="knight"></MyCard>
-        </Grid>
-        <Grid item xs>
-          <MyCard heroName="İrem" heroHp="150" heroDmg= "12" heroClass="witch"></MyCard>
+class App extends Component {
+  render() {
+    return(
+      <div className="App">
+      <CharacterCreator></CharacterCreator>
+        <Grid container spacing={1}>
+          <Grid item xs>
+          </Grid>
         </Grid>
         <Grid container spacing={1}>
-          <WeatherCard></WeatherCard>
+          <Widgets></Widgets>
+          {/* <Grid item xs>
+            <PersonCard personName="Kerem" phoneNumber="05551234567"gender="boy"/>
+          </Grid>
+          <Grid container spacing={1}>
+            <WeatherCard></WeatherCard>
+          </Grid> */}
         </Grid>
-      </Grid>
-    </div>
-  );
+      </div>
+    )
+  }
 }
 
 export default App;

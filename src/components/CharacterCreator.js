@@ -2,7 +2,7 @@ import React from 'react';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles, Grid, TextField, Select, MenuItem, FormControl, InputLabel, Button } from '@material-ui/core';
-import MyCard from './CharacterCard.js'
+import MyCard from './PersonCard.js'
 
 const useStyles = makeStyles(theme => ({
     root: {
