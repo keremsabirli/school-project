@@ -6,25 +6,25 @@ import boyImg from '../img/boy.svg';
 import girlImg from '../img/girl.svg';
 const useStyles = makeStyles(theme => ({
     root: {
-        border: "solid 2px",
+        border: "solid",
         borderRadius: 10,
-        padding: "10px",
-        margin: "10px"
+        padding: 10,
+        marginBottom: 10,
+        background: "#E1DFB3"
     }
 }))
 
-export default function MyCard(props) {
+export default function PersonCard(props) {
     const classes = useStyles();
     return (
-        <Grid container spacing={1} alignItems="center">
-            <Grid item xs={6}>
+        <Grid container alignItems="center">
+            <Grid item>
                 <Paper className={classes.root}>
                     <Grid container spacing={1} alignItems="center">
-                        <Grid container item xs>
-                            {/* <PersonImage /> */}
-                            {(props.gender === "boy") ? <img src={boyImg} alt="Boy"></img> : <img src={girlImg} alt="Girl"></img>}
+                        <Grid container item>
+                            {(props.gender === "Male") ? <img src={boyImg} alt="Boy"></img> : <img src={girlImg} alt="Female"></img>}
                         </Grid>
-                        <Grid container item xs>
+                        <Grid container item>
                             <Grid item >
                                 <Typography>
                                     Name : {props.personName}

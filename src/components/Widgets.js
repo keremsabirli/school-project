@@ -13,7 +13,7 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-class Widgets extends Component {
+class Widgets extends React.Component {
 
 }
 export default connect(mapStateToProps, mapDispatchToProps)(Widgets);

@@ -14,7 +14,7 @@ const styles = theme => ({
 });
 
 
-class WeatherCard extends Component {
+class WeatherCard extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
