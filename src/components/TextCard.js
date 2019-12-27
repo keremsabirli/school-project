@@ -5,6 +5,7 @@ const useStyles = makeStyles(theme => ({
         border: "solid",
         borderRadius: 10,
         padding: 10,
+        margin: 10,
         marginBottom: 10,
         background: "#E1DFB3"
     }

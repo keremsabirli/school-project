@@ -27,13 +27,6 @@ const TextCardCreator = () => {
         "userId": 1,
     }
     const CreateHandler = () => {
-        // axios.get("/TextWidget/1").then(res => {
-        //     res.data.text = text;
-        //     obj = res.data;
-        //     axios.post("/TextWidget", {obj}).then(res => {
-        //         console.log(res);
-        //     })
-        // })
         axios.post("/TextWidget", textWidgetData).then(res => {
             console.log(res);
             console.log(res.data);

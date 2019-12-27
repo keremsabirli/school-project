@@ -15,6 +15,8 @@ import Create from './components/Create';
 import Login from './components/Login';
 import Preview from './components/Preview';
 import Signup from './components/Signup';
+import WeatherCardCreator from './components/WeatherCardCreator';
+
 function Copyright() {
   return (
     <Typography variant="body2" color="textSecondary" align="center">
@@ -202,8 +204,6 @@ function App(props) {
                   <Route path="/Login" exact component={Login} />
                   <Route path="/Preview" exact component={Preview} />
                   <Route path="/Create" exact component={Create} />
-                  <Route path="/Create/CharacterCreator" exact component={CharacterCreator} />
-                  <Route path="/Create/WeatherCard" exact component={WeatherCard} />
                 </Content>
               </main>
             </Switch>

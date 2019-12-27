@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Typography, Grid, makeStyles, Select, MenuItem } from '@material-ui/core';
 import CharacterCreator from './CharacterCreator';
 import TextCardCreator from './TextCardCreator';
+import WeatherCardCreator from './WeatherCardCreator';
 const useStyles = makeStyles(theme => ({
     root: {
         width: '100%',
@@ -49,7 +50,7 @@ const Create = () => {
             <Grid item xs={6} />
             <Grid item xs={12}>
                 {(selectedWidget === "PersonCard") ? <CharacterCreator /> : null}
-                {(selectedWidget === "WeatherCard") ? <Typography>Weather Card Creator</Typography> : null}
+                {(selectedWidget === "WeatherCard") ? <WeatherCardCreator /> : null}
                 {(selectedWidget === "TextCard") ? <TextCardCreator /> : null}
             </Grid>
         </Grid>

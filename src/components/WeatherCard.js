@@ -9,7 +9,8 @@ const styles = theme => ({
         border: "solid 2px",
         borderRadius: 10,
         padding: "10px",
-        margin: "10px"
+        margin: "10px",
+        background: "#E1DFB3",
     }
 });
 
@@ -24,7 +25,7 @@ class WeatherCard extends React.Component {
 
     async makeRequest() {
         const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-        const weatherApiUrl = 'https://samples.openweathermap.org/data/2.5/weather?id=745042&appid=1881222ceafd222eb7f5212f0f0adaa7';
+        const weatherApiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + this.props.city + ',tr&appid=1881222ceafd222eb7f5212f0f0adaa7';
         const response = await fetch(proxyUrl + weatherApiUrl);
         const data = response.json().then((data) => {
             console.log(data);
@@ -62,7 +63,7 @@ class WeatherCard extends React.Component {
                                     Country: {country}
                                 </Typography>
                                 <Typography>
-                                    Temperature: {((temp - 32) / 1,8)}
+                                    Temperature: {((temp - 32) / 1,8)} °C
                                 </Typography>
                                 <Typography>
                                     {/* Description: {this.state.descriptionweather} */}
